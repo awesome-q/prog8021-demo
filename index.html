@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Browser Events</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+  </head>
+  <body>
+    <div class="section">
+      <h2>Click Event listeners</h2>
+
+      <button id="click-event-button" type="button">
+        Click Me!
+      </button>
+
+      <pre>
+        <span>function onClick(event) {</span>
+        <span>    alert('You clicked me!');</span>
+        <span>    console.log(event);</span>
+        <span>}</span>
+        <span></span>
+        <span>const button = document.querySelector('#click-event-button');</span>
+        <span></span>
+        <span>button.addEventListener('click', onClick);</span>
+      </pre>
+    </div>
+
+
+    <div class="section">
+      <h2>Input event listeners</h2>
+
+      <label>
+        Name:
+        <input id="name-input" type="text" />
+      </label>
+
+      <p id="greeting"></p>
+
+      <pre>
+        <span>const greeting = document.querySelector('#greeting')</span>
+        <span>const inputField = document.querySelector('#name-input');</span>
+        <span></span>
+        <span>function onInput(event) {</span>
+        <span>    const name = event.target.value;</span>
+        <span>    greeting.innerText = 'Hello, my name is ' + name;</span>
+        <span>}</span>
+        <span></span>
+        <span>inputField.addEventListener('input', onInput);</span>
+      </pre>      
+    </div>
+  </body>
+</html>
